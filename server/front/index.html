@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Brainer</title>
+
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+
+  <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css"/>
+
+  <link rel="stylesheet" href="css/dashboard.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="lib/morris/morris.css">
+
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="lib/raphael/raphael.js"></script>
+  <script src="lib/morris/morris.js"></script>
+
+  <script src="data/accidents_2005.geojson"></script>
+  <script src="data/roads.geojson"></script>
+
+
+  <!-- SCRIPTS -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="components/services/config_s.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="lib/angular-cookies/angular-cookies.js"></script>
+  <script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="lib/angular-ui-router/angular-ui-router.js"></script>
+
+  <script src="app.js"></script>
+  <script src="components/menu/menu_c.js"></script>
+  <script src="components/top_bar/top_bar_c.js"></script>
+  <script src="components/benford/benford_c.js"></script>
+  <!-- SCRIPTS -->
+
+
+</head>
+<body ng-controller="MasterCtrl">
+  <div id="page-wrapper" ng-class="{'active': toggle}" ng-cloak>
+    <menu></menu>
+    <div id="content-wrapper">
+      <div class="page-content">
+        <topbar></topbar>
+        <div ng-view=""></div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
