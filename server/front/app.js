@@ -6,13 +6,13 @@ var app = angular.module('app', [
 config([
     '$routeProvider', function($routeProvider) {
   return $routeProvider.when('/', {
-    redirectTo: '/dashboard'
+    redirectTo: '/benford'
   })
-  .when('/dashboard', {
+  .when('/benford', {
     templateUrl: 'components/benford/benford.html',
     controller: 'BenfordCtrl'
   })
-  .otherwise({redirectTo: '/dashboard'});
+  .otherwise({redirectTo: '/benford'});
 }]);
 
 angular.module('app.directives', []);
